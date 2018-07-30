@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\z.hamid\documents\visual studio 2015\projects\mtrn2500-assign2\mtrn2500-assign2\main.cpp(148): warning C4018: '<': signed/unsigned mismatch
+c:\users\z.hamid\documents\visual studio 2015\projects\mtrn2500-assign2\mtrn2500-assign2\main.cpp(572): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+c:\users\z.hamid\documents\visual studio 2015\projects\mtrn2500-assign2\mtrn2500-assign2\main.cpp(585): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+  MTRN2500-Assign2.vcxproj -> C:\Users\z.hamid\documents\visual studio 2015\Projects\MTRN2500-Assign2\Debug\MTRN2500-Assign2.exe
