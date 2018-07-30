@@ -1,0 +1,66 @@
+Reservation 1 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Zoo Penguin Jan 1 366
+Zoo Lion Jan 1 366
+Zoo Lizard Jan 1 366
+Zoo Elephant Jan 1 366
+Zoo Bird Jan 1 366
+Zoo Leopard Jan 1 366
+Zoo Echidna Jan 1 366
+Zoo Bear Jan 1 366
+Zoo Snake Jan 1 366
+Zoo Hyena Jan 1 366
+Zoo Sloth Jan 1 366
+Zoo Warthog Jan 1 366
+Zoo Whale Jan 1 366
+Zoo Wolf Jan 1 366
+Zoo Zebra Jan 1 366
+Request rejected
+Change 1 Zoo Penguin Lion Lizard Elephant Bird Leopard Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Reservation 2 Zoo Echidna
+Zoo Penguin Jan 1 1
+Zoo Lion Jan 1 1
+Zoo Lizard Jan 1 1
+Zoo Elephant Jan 1 1
+Zoo Bird Jan 1 1
+Zoo Leopard Jan 1 1
+Zoo Echidna Jan 1 1
+Zoo Bear Jan 1 1
+Zoo Snake Jan 1 1
+Zoo Hyena Jan 1 1
+Zoo Sloth Jan 1 1
+Zoo Warthog Jan 1 1
+Zoo Whale Jan 1 1
+Zoo Wolf Jan 1 1
+Zoo Zebra Jan 1 1
+Reservation 3 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Request rejected
+Change 3 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Reservation 4 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Reservation 5 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Reservation 6 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Reservation 7 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Reservation 8 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Reservation 9 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Reservation 10 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Reservation 11 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Change 4 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Request rejected
+Cancel 4
+Cancel 3
+Reservation 12 Zoo Penguin Lion Lizard Elephant Bird Leopard Echidna Bear Snake Hyena Sloth Warthog Whale Wolf Zebra
+Request rejected
+Zoo Penguin Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Lion Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Lizard Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Elephant Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Bird Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Leopard Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Echidna Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Bear Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Snake Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Hyena Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Sloth Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Warthog Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Whale Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Wolf Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357
+Zoo Zebra Jan 1 1 Jan 3 1 Jan 4 1 Jan 5 1 Jan 6 1 Jan 7 1 Jan 8 1 Jan 9 1 Jan 10 357

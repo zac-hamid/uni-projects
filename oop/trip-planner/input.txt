@@ -1,0 +1,34 @@
+Transfer 142 London
+Transfer 108 Berlin
+Transfer 65 Paris
+Transfer 98 Brussels
+Transfer 200 Amsterdam  
+Transfer 294 Lisbon 
+Transfer 320 Vienna
+Time 201 London Berlin
+Time 198 London Paris
+Time 120 London Brussels
+Time 299 London Amsterdam
+Time 350 London Lisbon
+Time 384 London Vienna
+Time 275 Berlin Paris
+Time 223 Berlin Brussels
+Time 742 Berlin Amsterdam
+Time 923 Berlin Lisbon
+Time 114 Berlin Vienna
+Time 334 Paris Brussels
+Time 202 Paris Amsterdam
+Time 310 Paris Lisbon
+Time 286 Paris Vienna
+Time 198 Brussels Amsterdam
+Time 745 Brussels Lisbon
+Time 654 Brussels Vienna
+Time 321 Amsterdam Lisbon
+Time 567 Amsterdam Vienna
+Time 94 Lisbon Vienna
+Trip Amsterdam London
+Trip Brussels Berlin
+Trip Vienna Lisbon
+Trip Berlin Amsterdam
+Trip Lisbon Paris
+Trip London Vienna

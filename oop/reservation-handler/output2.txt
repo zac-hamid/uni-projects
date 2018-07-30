@@ -1,0 +1,96 @@
+Reservation 1 A A B E
+Reservation 2 4 A C G
+Reservation 3 A D G
+Change 1 A A B
+Cancel 2
+Reservation 4 B B D
+Reservation 5 C A C
+Reservation 6 4 D E
+Change 6 4 D E
+Cancel 1
+Reservation 7 A A B E
+Reservation 8 A A C D G
+Reservation 9 B A B C E F G
+A A Oct 27 32 Dec 1 31
+A B Oct 27 32
+A C Dec 1 31
+A D Jan 1 31 Dec 1 31
+A E Oct 27 32
+A F
+A G Jan 1 31 Dec 1 31
+B A Dec 30 2
+B B Jan 1 31 Dec 30 2
+B C Dec 30 2
+B D Jan 1 31
+B E Dec 30 2
+B F Dec 30 2
+B G Dec 30 2
+C A Jan 1 31
+C B
+C C Jan 1 31
+C D
+C E
+C F
+C G
+4 A
+4 B
+4 C
+4 D Jan 1 31
+4 E Jan 1 31
+4 F
+4 G
+Change 8 A A B
+Cancel 8
+Cancel 4
+Reservation 4 B A C F
+Reservation 8 A A B
+Change 8 A A B
+Reservation 10 C B D G
+Cancel 6
+Cancel 9
+Cancel 7
+Cancel 5
+Cancel 8
+Cancel 10
+Cancel 3
+Cancel 4
+Reservation 1 A A B E
+Reservation 2 A A C D G
+Reservation 3 B A B C E F G
+Reservation 4 A D G
+Reservation 5 B B D
+Reservation 6 C A C
+Cancel 1
+Cancel 2
+Cancel 3
+Cancel 4
+Cancel 5
+Cancel 6
+A A
+A B
+A C
+A D
+A E
+A F
+A G
+B A
+B B
+B C
+B D
+B E
+B F
+B G
+C A
+C B
+C C
+C D
+C E
+C F
+C G
+4 A
+4 B
+4 C
+4 D
+4 E
+4 F
+4 G

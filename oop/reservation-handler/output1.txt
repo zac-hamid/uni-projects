@@ -1,0 +1,46 @@
+Reservation 1 Australia Sydney Melbourne Adelaide Perth
+Reservation 2 Japan Kyoto Yokohama
+Reservation 3 Australia Adelaide Brisbane
+Cancel 1
+Change 3 Australia Adelaide Perth
+Reservation 1 Australia Sydney Melbourne Adelaide Brisbane Perth
+Reservation 4 Japan Tokyo Fukuoka Nagoya
+Reservation 5 France Paris Marseille Lyon Bordeaux
+Reservation 6 Australia Brisbane
+Reservation 7 Australia Adelaide
+Reservation 8 USA Atlanta Chicago Houston
+Reservation 9 Australia Sydney Melbourne
+Reservation 10 Australia Brisbane
+Change 7 Australia Adelaide Perth
+Change 10 Australia Brisbane
+Reservation 11 USA Atlanta Chicago Houston Pittsburgh Baltimore
+Request rejected
+Change 11 USA Atlanta Chicago Houston Pittsburgh
+Australia Sydney Jan 1 4 Sep 4 89
+Australia Melbourne Jan 1 4 Sep 4 89
+Australia Adelaide Mar 3 5 Sep 4 89 Dec 27 5
+Australia Brisbane Feb 28 3 Aug 3 1 Sep 4 89
+Australia Canberra
+Australia Perth Mar 3 5 Sep 4 89 Dec 27 5
+Japan Tokyo Jan 1 366
+Japan Kyoto Mar 23 3
+Japan Osaka
+Japan Yokohama Mar 23 3
+Japan Fukuoka Jan 1 366
+Japan Nagoya Jan 1 366
+USA Atlanta Jan 1 1 Nov 9 2
+USA Chicago Jan 1 1 Nov 9 2
+USA Houston Jan 1 1 Nov 9 2
+USA Pittsburgh Nov 9 2
+USA Baltimore
+Italy Florence
+Italy Rome
+Italy Venice
+Italy Milan
+Italy Pisa
+Italy Naples
+France Paris Jan 1 366
+France Marseille Jan 1 366
+France Lyon Jan 1 366
+France Bordeaux Jan 1 366
+France Strasbourg
