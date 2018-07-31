@@ -1,0 +1,33 @@
+[System]
+Name='MTRN4010_ang4'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='dq'
+Range=[-3.14159265358979 3.14159265358979]
+NumMFs=3
+MF1='NB':'trimf',[-6.28 -3.15 -0.05]
+MF2='ZE':'trimf',[-1 0 1]
+MF3='PB':'trimf',[0.05 3.15 6.28]
+
+[Output1]
+Name='ang'
+Range=[-3.14159265358979 3.14159265358979]
+NumMFs=3
+MF1='NB':'trimf',[-6.28 -3.15 -0.238288190682557]
+MF2='ZE':'trimf',[-1 0 1]
+MF3='PB':'trimf',[0.170205850487541 3.15 6.28]
+
+[Rules]
+2, 2 (1) : 1
+1, 1 (1) : 1
+3, 3 (1) : 1
