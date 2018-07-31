@@ -4,7 +4,7 @@ My project is, in essence, a simplified implementation of a lot of the features 
 
 ----
 Features include:
-* SHA256 hashing algorithm (made by me)
+* SHA256 hasher
 * Public-Private asymmetric keypair generation using Elliptic Curve Cryptography (with ECDSA for signing transactions)
 * Mining blocks on the blockchain (by solving the hash function with a specified difficulty)
 * Making transactions on the blockchain
