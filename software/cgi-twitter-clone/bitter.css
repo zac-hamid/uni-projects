@@ -1,0 +1,231 @@
+/*
+ * written by andrewt@cse.unsw.edu.au September 2015
+ * as a starting point for COMP2041/9041 assignment 2
+ * http://cgi.cse.unsw.edu.au/~cs2041/assignments/bitter/
+ *
+ * Change (or replace) the CSS below to create you own look-and-feel
+ *
+ * You will probably want to add  CSS to this file too
+ */
+
+.top_bar_heading {
+    background-color: 
+
+}
+
+.bitter_heading {
+    padding-top: 0.5em;
+    padding-bottom: 0.1em;
+    text-align: center;
+    font: italic bold 50px Verdana, serif;
+}
+
+.heading_quote {
+    padding-bottom: 0.5em;
+    text-align: center;
+    font: italic 12px Verdana, serif;
+}
+
+.login_wrapper {
+    width:35%;
+    margin: 0 auto;
+    text-align:center;
+    border-radius: 1em;
+    border: thin solid #000000;
+    background-color: #F5FCFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bitter_user_details {
+    background-color: #F0F0F0;
+    color: #204142;
+    white-space: pre;
+    border:thick solid #204142;
+    border-radius: 1em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-bottom: 0em;
+    text-align: center;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.profile_details {
+    background-color: #F5FCFF;
+    border: thin solid #000000;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    padding-bottom: 0.25em;
+    padding-top: 0.1em;
+    border-radius: 1em;
+}
+
+.profile_details a:link {
+    text-decoration: none;
+    color: #3697FF;
+}
+
+.profile_details a:hover {
+    text-decoration: underline;
+}
+
+.bleat_whole a:link {
+    color: #ABABAB;
+    text-decoration:none;
+}
+
+.bleat_whole a:visited {
+    color: #ABABAB;
+}
+
+.bleat_whole a:hover {
+    text-decoration: underline;
+}
+
+.bleats a:link {
+   color: #3697FF;
+   text-decoration:none;
+}
+
+.bleats a:visited {
+   color: #3697FF;
+}
+
+.bleats a:hover {
+   text-decoration:underline;
+}
+
+a:visited {
+   color: #3697FF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.bitter_button {
+    background-color: #FEDBCA;
+    border:thin solid #904142;
+    border-radius: 0.42em;
+    color: #904142;
+}
+
+.profile_img {
+    width: 225px;
+    height: 250px;
+    border-radius: 50%;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    background-color: #E0E0E0;
+    border:thin solid #000000;
+}
+
+.no_profile_img {
+    width: 225px;
+    height: 250px;
+    border-radius: 50%;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    background-color: #E0E0E0;
+    border:thin solid #000000;
+    margin: 0 auto;
+}
+
+.fullname {
+    font: 16px verdana, serif;
+    color: #3697FF
+}
+
+.username {
+    font: 14px verdana, serif;
+    color: #ABABAB;
+}
+
+.bleats {
+    border: thin solid #204142;
+    border-radius: 1em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    max-width:600px;
+    mix-width:500px;
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-color: #FFFFFF;
+    font: 14px verdana, serif;
+    
+}
+.bleats img {
+    width:100%;
+    height: auto;
+}
+.bleat_whole {
+    background-color: #FFFFFF;
+    border-radius: 1em;
+    padding: 0.5em;
+    text-align: left;
+}
+
+.bleat_at {
+    color: #5EC7FF;
+}
+
+.bleat_hash {
+    color: #ABABAB;
+}
+
+.bleat_contain {
+    background-color: #89CFF0;
+    border:thin solid #000000;
+    border-radius: 1em;
+    padding: 0.75em;
+    display:inline-block;
+    
+}
+
+.bitter_main_wrapper {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bleat_create {
+    width: 80%;
+    margin:auto;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.search_bar {
+    margin-bottom: 0.75em;
+    
+}
+
+.search_button {
+
+}
+
+.search_field {
+
+}
+
+.search_results {
+    display:inline-block;
+    border-radius: 1em;
+    border: thin solid #000000;
+    background-color: #F5FCFF;
+    padding: 0.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.search_main_wrapper {
+    border-radius: 1em;
+    border: thin solid #000000;
+    background-color: #89CFF0;
+    display:inline-block;
+    padding: 0.5em;
+}
