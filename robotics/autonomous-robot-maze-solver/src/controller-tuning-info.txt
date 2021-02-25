@@ -1,0 +1,12 @@
+yaw controller values:
+
+oscillates at Kp = 12.8 Ki = 0, Kd = 0
+possibly at Kp = ~10 actually
+
+
+yaw controller values:
+10, 0.2, 0.3
+
+8, 0.6, 0.9
+
+7, 0.6, 0.9 

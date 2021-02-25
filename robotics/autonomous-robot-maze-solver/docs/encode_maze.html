@@ -1,0 +1,176 @@
+
+<html>
+    <head>
+        <title>MazeMaker</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+            integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+        <style>
+            * {
+                font-family: 'Open Sans', sans-serif;
+            }
+            .wall, .wall-fixed {
+                background:#EEE;
+                display:inline-block;
+                cursor:pointer;
+            }
+            .wall.on {
+                background:#1fba05;
+            }
+            .wall.unknown {
+                background:#cd5046;
+            }
+            .wall-fixed {
+                background: #333;
+            }
+            .v-wall {
+                height:60px;
+                width:10px;
+            }
+            .h-wall {
+                height:10px;
+                width:60px;
+                margin-left:10px;
+            }
+            .tile {
+                height:60px;
+                width:60px;
+                display:inline-block;
+                vertical-align:bottom;
+                font-size:30px;
+                padding-top: 10px;
+                box-sizing:border-box;
+                text-align:center;
+                cursor:pointer;
+            }
+            .tile.end {
+                background:#bbf950;
+            }
+            .tile.start {
+                background:#e1e62d;
+            }
+            #encoded, #encoded2 {
+                width:100%;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Encode your maze here! </p>
+        <div id="maze"></div>
+        <br/>
+        <button id="direction" data-dir="0">North</button>
+        <button id="flip">Flip all walls</button>
+        <input id="encoded"></input>
+        <!--<input id="encoded2"></input>-->
+        <template id="v-wall"><div class="wall v-wall on"></div></template>
+        <template id="v-wall-fixed"><div class="wall-fixed v-wall"></div></template>
+        <template id="tile"><div class="tile"></div></template>
+        <template id="h-wall"><div class="wall h-wall on"></div></template>
+        <template id="h-wall-fixed"><div class="wall-fixed h-wall"></div></template>
+    </body>
+    <script>
+        var tileNumber = 0;
+        var generateHWalls = function(width, include) {
+            for (var i = 0; i < width; i++) {
+                if (include)
+                    $('#maze').append($('#h-wall').html());
+                else
+                    $('#maze').append($('#h-wall-fixed').html());
+            }
+        }
+
+        var generateVWallsAndTiles = function(width) {
+            $('#maze').append($('#v-wall-fixed').html());
+            for (var i = 0; i < width-1; i++) {
+                $('#maze').append($($('#tile').html()).attr('data-tileid', tileNumber++));
+                $('#maze').append($('#v-wall').html());
+            }
+            $('#maze').append($($('#tile').html()).attr('data-tileid', tileNumber++));
+            $('#maze').append($('#v-wall-fixed').html());
+        }
+
+        var getEncodedText = function() {
+            var str = '#9.5.';
+            var start = $('.start');
+            var end = $('.end');
+            str += (start.length ? start.data('tileid') : 'N');
+            str += '.';
+            str += (end.length ? end.data('tileid') : 'N');
+            str += '.';
+            str += $('#direction').attr('data-dir');
+            str += '.H';
+            $('.wall.h-wall').each(function(d, wall) {
+                str += $(wall).hasClass('on') ? 1 : ($(wall).hasClass('unknown') ? 2 : 0);
+            });
+            str += '.V';
+            $('.wall.v-wall').each(function(d, wall) {
+                str += $(wall).hasClass('on') ? 1 : ($(wall).hasClass('unknown') ? 2 : 0);
+            });
+            str += '@';
+            return str;
+        }
+        
+        var width = 9;
+        var length = 5;
+        generateHWalls(width, false);
+        $('#maze').append('<br/>');
+        for (var i = 0; i < length - 1; i++) {
+            generateVWallsAndTiles(width);
+            $('#maze').append('<br/>');
+            generateHWalls(width, true);
+            $('#maze').append('<br/>');
+        }
+        generateVWallsAndTiles(width);
+        $('#maze').append('<br/>');
+        generateHWalls(width, false);
+        $('#maze').append('<br/>');
+        
+        // Post-processing
+        // Show encoded value in the textbox
+        $('#encoded').val(getEncodedText());
+        // Mark the end tile
+        $('#maze .tile:eq(22)').addClass('end').html('E');
+
+        $('.wall').on('click', function(e) {
+            if ($(this).hasClass('on')) {
+                $(this).removeClass('on');
+                $(this).addClass('unknown');
+            } else if ($(this).hasClass('unknown')) {
+                $(this).removeClass('unknown');
+                $(this).addClass('off');
+            } else {
+                $(this).addClass('on');
+                $(this).removeClass('off');
+            }
+            $('#encoded').val(getEncodedText());
+        });
+        $('.tile').on('click', function(e) {
+            if ($(this).html() === 'S') {
+                $('.start').removeClass('start').html('');
+                $('#encoded').val(getEncodedText());
+                return;
+            }
+            $('.start').removeClass('start').html('');
+            $(this).addClass('start').html('S');
+            $('#encoded').val(getEncodedText());
+        });
+        $('#direction').on('click', function() {
+            var direction = parseInt($(this).attr('data-dir'));
+            direction = ++direction % 4;
+            $(this).attr('data-dir', direction);
+            if (direction === 0) {
+                $(this).text('North');
+            } else if (direction === 1) {
+                $(this).text('East');
+            } else if (direction === 2) {
+                $(this).text('South');
+            } else {
+                $(this).text('West');
+            }
+            $('#encoded').val(getEncodedText());
+        });
+        $('#flip').on('click', function() {
+            $('.wall').click();
+        });
+    </script>
+</html>

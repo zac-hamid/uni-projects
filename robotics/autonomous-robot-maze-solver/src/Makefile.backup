@@ -1,0 +1,52 @@
+# Arduino Make file. Refer to https://github.com/sudar/Arduino-Makefile
+
+
+include board.mk
+
+### PROJECT_DIR
+### This is the path to where you have created/cloned your project
+# PROJECT_DIR       = // set by calling make
+#
+PROJECT_DIR = ..
+ARDMK_DIR = $(PROJECT_DIR)/Arduino-Makefile
+
+###############################################
+############### Add hardware lib ##############
+###############################################
+HARDWARE_ARCHIVE = build-$(BOARD_TAG)/libhardware.a
+CXXFLAGS += -IHardware
+OTHER_OBJS += Hardware/$(HARDWARE_ARCHIVE)
+
+Hardware/$(HARDWARE_ARCHIVE):
+	$(MAKE) -C Hardware $(HARDWARE_ARCHIVE)
+
+clean::
+	$(MAKE) -C Hardware clean
+
+###############################################
+############### Add external lib ##############
+###############################################
+EXTERNAL_ARCHIVE = build-$(BOARD_TAG)/libexternal.a
+CXXFLAGS += -IExternal
+OTHER_OBJS += External/$(EXTERNAL_ARCHIVE)
+
+External/$(EXTERNAL_ARCHIVE):
+	$(MAKE) -C External $(EXTERNAL_ARCHIVE)
+
+clean::
+	$(MAKE) -C External clean
+# VERRY IMPORTANT!!! LAST LINE OF FILE!!!!!!!!!
+# MUST BE AFTER LIBRARIES HAVE BEEN LINKED
+include $(ARDMK_DIR)/Arduino.mk
+
+#MONITOR_PORT = /dev/ttyUSB0
+#ARDUINO_PORT = /dev/ttyUSB0
+#ARDUINO_DIR = ~/Programs/arduino-1.8.9
+
+# --- mega2560 ide 1.6
+#BOARD_TAG    = mega
+#BOARD_SUB    = atmega2560
+#MONITOR_PORT = /dev/ttyACM0
+#ARDUINO_DIR  = /where/you/installed/arduino-1.6.5
+#include /usr/share/arduino/Arduino.mk
+

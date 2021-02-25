@@ -1,0 +1,15 @@
+[submodule "libs/Hardware/Arduino-Makefile"]
+	path = libs/Hardware/Arduino-Makefile
+	url = https://github.com/leka/Arduino-Makefile.git
+[submodule "Arduino-Makefile"]
+	path = Arduino-Makefile
+	url = https://github.com/leka/Arduino-Makefile.git
+[submodule "vision/opencv_contrib"]
+	path = vision/opencv_contrib
+	url = https://github.com/opencv/opencv_contrib.git
+[submodule "vision/opencv"]
+	path = vision/opencv
+	url = https://github.com/opencv/opencv.git
+[submodule "lib/TimerOne"]
+	path = lib/TimerOne
+	url = https://github.com/PaulStoffregen/TimerOne.git

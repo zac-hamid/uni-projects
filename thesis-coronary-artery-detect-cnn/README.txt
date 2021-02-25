@@ -1,0 +1,2 @@
+.PDF is the final thesis report put together by my team and I, the Data Analysis I and Data Analysis II sections were completed together by both Calandra and I, but for the report we were told to each put our names above one section.
+The report outlines the performance and structure of the network, as well as the entire process from database -> training data for the network.

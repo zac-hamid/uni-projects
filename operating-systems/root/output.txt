@@ -1,0 +1,119 @@
+
+OS/161 base system version 2.0.3
+(with locks/CVs, system calls solutions)
+Copyright (c) 2000, 2001-2005, 2008-2011, 2013, 2014
+   President and Fellows of Harvard College.  All rights reserved.
+
+Put-your-group-name-here's system version 0 (ASST3 #20)
+
+16208k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lser0 at lamebus0
+con0 at lser0
+
+cpu0: MIPS/161 (System/161 2.x) features 0x0
+OS/161 kernel [? for menu]: p /testbin/triplehuge
+/testbin/triplehuge: Starting: running three copies of /testbin/huge...
+Entering the huge program - I will stress test your VM
+Entering the huge program - I will stress test your VM
+stage [1] done
+Entering the huge program - I will stress test your VM
+stage [1] done
+stage [2.0] done
+stage [2.0] done
+stage [2.1] done
+stage [2.1] done
+stage [1] done
+stage [2.2] donestage [2.2] done
+
+stage [2.3] done
+stage [2.0] done
+stage [2.4] done
+stage [2] done
+stage [2.3] done
+You passed!
+stagestage [2.1] done
+ [2.4] done
+stage [2] done
+stage [2.2] done
+You passed!
+stage [2.3] done
+stage [2.4] done
+stage [2] done
+You passed!
+/testbin/triplehuge: Congratulations! You passed.
+Program (pid 2) exited with status 0
+Operation took 2.644024697 seconds
+OS/161 kernel [? for menu]: p /testbin/triplehuge
+/testbin/triplehuge: Starting: running three copies of /testbin/huge...
+Entering the huge program - I will stress test your VM
+Entering the huge program - I will stress test your VM
+stage [1] done
+Entering the huge program - I will stress test your VM
+stage [1] done
+stage [2.0] done
+stage [2.0] done
+stage [2.1] done
+stage [1] done
+stage [2.2] done
+stage [2.0] done
+stagstage [2.1] done
+e [2.3] done
+stage [2.1] done
+stage [2.2] done
+stage [2.stage [2.4] done
+stage [2] done
+2] done
+You passed!
+stage [2.3] done
+stage [2.stage [2.4] done
+stage [2] done
+3] done
+You passed!
+stage [2.4] done
+stage [2] done
+You passed!
+/testbin/triplehuge: Congratulations! You passed.
+Program (pid 6) exited with status 0
+Operation took 2.617577195 seconds
+OS/161 kernel [? for menu]: [ p /testbin/triplehuge
+/testbin/triplehuge: Starting: running three copies of /testbin/huge...
+Entering the huge program - I will stress test your VM
+Entering the huge program - I will stress test your VM
+stage [1] done
+Entering the huge program - I will stress test your VM
+stage [1] done
+stage [2.0] done
+stage [2.0] done
+stage [2.1] done
+stage [2.1] done
+stage [1] done
+stage [2.2] done
+stage [2.2] done
+stage [2.0] dostage [2.3] done
+ne
+stage [2.4] done
+stage [2] done
+stage [2.1] done
+You passed!
+stage [2.stage [2.3] done
+2] done
+stage [2.4] done
+stage [2] donestage [2.3] done
+
+stage [2.4] done
+stage [2] done
+You passed!
+You passed!
+/testbin/triplehuge: Congratulations! You passed.
+Program (pid 10) exited with status 0
+Operation took 2.670293958 seconds
+OS/161 kernel [? for menu]: 

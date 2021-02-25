@@ -1,0 +1,17 @@
+June 5, 2019
+Attendance: Calvin, Isaac, Oliver, Zac
+
+Aims:
+- Discuss individual roles
+- Discuss high level roles
+
+Minutes:
+- 2-wheel drive differential
+- Design philosophy: correctness, simple, speed (in order)
+- Ability to rotate on the spot
+- We want to see forward, left, right
+- Poles serve as a measuring unit (change in distance from plywood to pole)
+- Sensors in the centre for point of reference/centering
+- Need status led
+- 2 lidars on left/right side to make sure perpendicular to wall via triangulation
+- 1 lidar on left and 1 lidar on right to detect drift from centre (make sure perpendicular). Won't work with gap in wall.
