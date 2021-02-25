@@ -1,0 +1,9 @@
+Group_Component/
+sequence/
+
+yolov3.weights
+yolov3.cfg
+coco.names
+
+.ipynb_checkpoints/
+__pycache__/
