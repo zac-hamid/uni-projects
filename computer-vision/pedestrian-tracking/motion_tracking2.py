@@ -17,18 +17,31 @@ from numpy.random import uniform
 import cv2
 import sys
 
+def clip_ords(img,bbox):
+    ph, pw = img.shape[:2]
+    x,y,w,h = bbox[:4]
+    x0 = min(max(0, x), pw)
+    y0 = min(max(0, y), ph)
+    x1 = min(x+w, pw)
+    y1 = min(y+h, ph)
+    return (x0, y0, x1-x0, y1-y0)
+
+def invalid_bbox(img,bbox):
+    x,y,w,h = clip_ords(img,bbox) #bbox[:4]
+    if w <= 0 or h <= 0:
+        return True # is invalid
+    return False
+
 class ParticleFilter:
     """Particle filter motion tracking.
-
     This class estimates the position of a single point
     in a image. It can be used to predict the position of a
     landmark for example when tracking some face features, or
     to track the corner of a bounding box.
     """
 
-    def __init__(self, width, height, N):
+    def __init__(self, width, height, N, offset_x=0, offset_y=0):
         """Init the particle filter.
-
         @param width the width of the frame
         @param height the height of the frame
         @param N the number of particles
@@ -36,8 +49,8 @@ class ParticleFilter:
         if(N <= 0 or N>(width*height)): 
             raise ValueError('[DEEPGAZE] motion_tracking.py: the ParticleFilter class does not accept a value of N which is <= 0 or >(widht*height)')
         self.particles = np.empty((N, 2))
-        self.particles[:, 0] = uniform(0, width, size=N) #init the X coord
-        self.particles[:, 1] = uniform(0, height, size=N) #init the Y coord
+        self.particles[:, 0] = uniform(0, width, size=N) + offset_x #init the X coord
+        self.particles[:, 1] = uniform(0, height, size=N) + offset_y #init the Y coord
         #Init the weiths vector as a uniform distribution
         #at the begining each particle has the same probability
         #to represent the point we are following
@@ -63,7 +76,7 @@ class ParticleFilter:
 
     def update(self, x, y):
         """Update the weights associated which each particle based on the (x,y) coords measured.
-        Particles that closely match the measurements give an higher contribution.
+        Particles that closely match the measurements give an higher contribution (Euclidean dist).
  
         The position of the point at the next time step is predicted using the 
         estimated speed along X and Y axis and adding Gaussian noise sampled 
@@ -93,6 +106,52 @@ class ParticleFilter:
         #Renormalize by dividing all the weights by the sum of all the weights.
         self.weights += 1.e-300 #avoid zeros
         self.weights /= sum(self.weights) #normalize
+
+    ####[REPLACES: update()]#####################
+    # Injected code from color histogram student paper
+    def get_particle_detection_weights(self, detect_x, detect_y, std_m):
+        num = (self.particles[:,0] - detect_x)**2 + (self.particles[:,1] - detect_y)**2
+        # print("Detected position:")
+        # print(detect_x, detect_y)
+        # print('Particle positions:')
+        # print(self.particles)
+        # print('Num:')
+        # print(num)
+        return np.exp(-num / (2*std_m**2)) / np.sqrt(2*np.pi*std_m**2)
+
+    # https://docs.opencv.org/master/dd/d0d/tutorial_py_2d_histogram.html
+    # https://docs.opencv.org/3.4/d8/dc8/tutorial_histogram_comparison.html
+    def get_color_appearance_weights(self, img,mask, bbox_w,bbox_h, 
+                                     ref_hist,ref_subhist_nentries, calc_hist_feature_func):
+        nrows = len(self.particles) # or use: .shape[0]
+        hist_result = np.zeros(nrows)
+        # for each particle, compare color histogram
+        for i in range(nrows):
+            x,y = self.particles[i]  # top left of bbox
+            x = int(x)  # particles are computed as floats
+            y = int(y)
+            bbox = clip_ords(img, (x,y,bbox_w,bbox_h))  # bbox from particle pos may go out of bounds
+            
+            particle_hist, particle_subhist_nentries = calc_hist_feature_func(img, mask, bbox, True)
+            # calc subhist result of each histogram
+            subhist_result = np.zeros(len(ref_hist))
+            subhist_nentries = np.zeros(len(ref_hist))
+            for j in range(len(ref_hist)):
+                subhist_result[j] = ( 1 - cv2.compareHist(particle_hist[j], ref_hist[j], cv2.HISTCMP_BHATTACHARYYA) )
+                subhist_nentries[j] = ref_subhist_nentries[j] + particle_subhist_nentries[j]
+            # apply normalised weighting on result (pairwise mult)
+            subhist_nentries_sum = subhist_nentries.sum()
+            if subhist_nentries_sum > 0:
+                subhist_nentries /= subhist_nentries_sum
+            hist_result[i] = (subhist_result * subhist_nentries).sum()
+        return hist_result
+
+    def update_dual_weights(self, detection_weights, color_weights, alpha):
+        self.weights = (1 - alpha) * detection_weights + alpha * color_weights
+        self.weights += 1.e-300 #avoid zeros
+        self.weights /= sum(self.weights) #normalize
+
+    #############################################
 
     def estimate(self):
         """Estimate the position of the point given the particle weights.
@@ -238,5 +297,3 @@ class ParticleFilter:
         """
         for x_particle, y_particle in self.particles.astype(int):
             cv2.circle(frame, (x_particle, y_particle), radius, color, -1) #RED: Particles
-
-

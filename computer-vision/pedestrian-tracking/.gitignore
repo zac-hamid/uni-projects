@@ -7,3 +7,6 @@ coco.names
 
 .ipynb_checkpoints/
 __pycache__/
+
+*.avi
+*.mp4
